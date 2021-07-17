@@ -8,4 +8,5 @@ from app_sekolah import views as sekolah
 
 urlpatterns = [
     path('', auth.home_page),
+    path('siswa/tambah-data/proses', siswa.tambah_data_proses)
 ]
