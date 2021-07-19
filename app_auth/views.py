@@ -9,3 +9,9 @@ def home_page(request):
         'app_name' : 'Nadha-Education-Data-Control'
     }
     return render(request, 'auth/home-page.html', context)
+
+def login_page(request):
+    context = {
+        'app_name' : 'Nadha-Education-Data-Control'
+    }
+    return render(request, 'auth/login-page.html', context)
