@@ -24,3 +24,14 @@ class DataRegistrasiPpdb(models.Model):
     update_at = models.DateTimeField()
     class Meta:
         db_table = "tbl_registrasi_ppdb"
+
+class DataPeriodePpdb(models.Model):
+    kd_periode = models.CharField(max_length=20)
+    nama_periode = models.CharField(max_length=100)
+    keterangan = models.TextField()
+    tahun_ajaran_awal = models.CharField(max_length=4)
+    tahun_ajaran_akhir = models.CharField(max_length=4)
+    mulai_tanggal = models.DateField()
+    akhir_tanggal = models.DateField()
+    class Meta : 
+        db_table = "tbl_periode_ppdb"
