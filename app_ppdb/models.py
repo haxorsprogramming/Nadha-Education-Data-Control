@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class DataRegistrasiPpdb(models.Model):
+class PpdbRegistrasiSiswa(models.Model):
     username = models.CharField(max_length=150)
     nis = models.CharField(max_length=20)
     nisn = models.CharField(max_length=20)
@@ -23,9 +23,9 @@ class DataRegistrasiPpdb(models.Model):
     penghasilan_wali = models.CharField(max_length=20)
     update_at = models.DateTimeField()
     class Meta:
-        db_table = "tbl_registrasi_ppdb"
+        db_table = "tbl_ppdb_registrasi_siswa"
 
-class DataPeriodePpdb(models.Model):
+class PpdbPeriode(models.Model):
     kd_periode = models.CharField(max_length=20)
     nama_periode = models.CharField(max_length=100)
     keterangan = models.TextField()
@@ -34,4 +34,4 @@ class DataPeriodePpdb(models.Model):
     mulai_tanggal = models.DateField()
     akhir_tanggal = models.DateField()
     class Meta : 
-        db_table = "tbl_periode_ppdb"
+        db_table = "tbl_ppdb_periode"

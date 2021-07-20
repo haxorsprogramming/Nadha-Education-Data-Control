@@ -1,7 +1,7 @@
 from django.db import models
 
 # model siswa.
-class DataSiswa(models.Model):
+class SiswaData(models.Model):
     username = models.CharField(max_length=150)
     nis = models.CharField(max_length=20)
     nisn = models.CharField(max_length=20)
@@ -23,4 +23,4 @@ class DataSiswa(models.Model):
     penghasilan_wali = models.CharField(max_length=20)
     update_at = models.DateTimeField()
     class Meta:
-        db_table = "tbl_data_siswa"
+        db_table = "tbl_siswa_data"

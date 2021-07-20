@@ -4,7 +4,7 @@ from django.http import JsonResponse
 
 import datetime
 
-from .models import DataSiswa
+from .models import SiswaData
 
 waktu = datetime.datetime.now()
 
