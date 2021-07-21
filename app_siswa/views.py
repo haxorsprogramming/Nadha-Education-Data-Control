@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
+from django.db import connection
+from django.core import serializers
 
 import datetime
 
 from .models import SiswaData
+from app_daerah.models import DaerahKabupaten
 
 waktu = datetime.datetime.now()
 
@@ -14,5 +17,20 @@ def tambah_data_proses(request):
     # p_tambah.save();
     context = {
         'status' : 'sukses'
+    }
+    return JsonResponse(context, safe=False)
+
+def tes_sql_raw(request):
+    kabupaten = DaerahKabupaten.objects.all().values()
+    kab_data = []
+    # print(type(kabupaten))
+    no = 0 
+    for x in kabupaten:
+        nama_kab = x[no]['nama']
+        kab_data.append(nama_kab)
+
+    context = {
+        'status' : 'sukses',
+        'kab_data' : kab_data
     }
     return JsonResponse(context, safe=False)
