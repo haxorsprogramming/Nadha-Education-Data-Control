@@ -6,6 +6,7 @@ import datetime
 
 from .models import SiswaData
 from app_daerah.models import DaerahKabupaten
+from .c_siswa import fungsi_import
 
 waktu = datetime.datetime.now()
 
@@ -15,6 +16,13 @@ def tambah_data_proses(request):
     # p_tambah.save();
     context = {
         'status' : 'sukses'
+    }
+    return JsonResponse(context, safe=False)
+
+def tes_import_fungsi(request):
+    nama = fungsi_import('aditia darma')
+    context = {
+        'status' : nama
     }
     return JsonResponse(context, safe=False)
 
