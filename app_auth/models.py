@@ -15,8 +15,9 @@ class AuthRegistrasiUser(models.Model):
     username = models.CharField(max_length=150)
     kata_sandi = models.CharField(max_length=150)
     tipe_user = models.CharField(max_length=30)
+    # waktu_registrasi
     class Meta:
-        db_table = "tbl_auth_registrasi_sekolah"
+        db_table = "tbl_auth_registrasi_user"
 
 class AuthSekolah(models.Model):
     kd_access = models.CharField(max_length=50)
@@ -24,7 +25,5 @@ class AuthSekolah(models.Model):
     npsn = models.CharField(max_length=20)
     nama_sekolah = models.CharField(max_length=200)
     email_sekolah = models.CharField(max_length=200)
-    start_subs = models.DateField()
-    expired_subs = models.DateField()
     class Meta:
         db_table = "tbl_auth_sekolah"
