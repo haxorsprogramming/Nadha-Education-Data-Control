@@ -6,7 +6,7 @@ import datetime
 
 from .models import SiswaData
 from app_daerah.models import DaerahKabupaten
-from .c_siswa import fungsi_import
+from .c_siswa import fungsi_import, fungsi_kedua
 
 waktu = datetime.datetime.now()
 
@@ -32,7 +32,7 @@ def tes_sql_raw(request):
     # print(type(kabupaten))
     no = 0 
     for x in kabupaten:
-        nama_kab = dict(id_kab =  kabupaten[no]['id_kab'], nama = kabupaten[no]['nama'])
+        nama_kab = dict(id_kab = kabupaten[no]['id_kab'], nama = kabupaten[no]['nama'])
         kab_data.append(nama_kab)
         no += 1
 
