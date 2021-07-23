@@ -40,6 +40,6 @@ class SiswaData(models.Model):
     nama_wali = models.CharField(max_length=150, blank=True)
     alamat_orang_tua = models.TextField(blank=True)
     no_hp_orang_tua = models.CharField(max_length=20)
-    last_update = models.DateTimeField()
+    last_update = models.DateTimeField(auto_now=False)
     class Meta:
         db_table = "tbl_siswa_data"
