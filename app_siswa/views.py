@@ -22,18 +22,18 @@ def tambah_data_proses(request):
     # }
     # return JsonResponse(context, safe=False)
 
-def tes_sql_raw(request):
-    kabupaten = DaerahKabupaten.objects.all()[:20].values()
-    kab_data = []
-    # print(type(kabupaten))
-    no = 0 
-    for x in kabupaten:
-        nama_kab = dict(id_kab = kabupaten[no]['id_kab'], nama = kabupaten[no]['nama'])
-        kab_data.append(nama_kab)
-        no += 1
+# def tes_sql_raw(request):
+#     kabupaten = DaerahKabupaten.objects.all()[:20].values()
+#     kab_data = []
+#     # print(type(kabupaten))
+#     no = 0 
+#     for x in kabupaten:
+#         nama_kab = dict(id_kab = kabupaten[no]['id_kab'], nama = kabupaten[no]['nama'])
+#         kab_data.append(nama_kab)
+#         no += 1
 
-    context = {
-        'status' : 'sukses',
-        'kab_data' : kab_data
-    }
-    return JsonResponse(context, safe=False)
+#     context = {
+#         'status' : 'sukses',
+#         'kab_data' : kab_data
+#     }
+#     return JsonResponse(context, safe=False)
