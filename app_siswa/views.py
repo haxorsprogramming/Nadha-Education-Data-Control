@@ -4,10 +4,6 @@ from django.http import JsonResponse
 
 import datetime
 
-from .models import SiswaData
-from app_daerah.models import DaerahKabupaten
-from .c_siswa import fungsi_import, fungsi_kedua
-
 waktu = datetime.datetime.now()
 
 # Create your views here.
@@ -19,12 +15,12 @@ def tambah_data_proses(request):
     }
     return JsonResponse(context, safe=False)
 
-def tes_import_fungsi(request):
-    nama = fungsi_import('aditia darma')
-    context = {
-        'status' : nama
-    }
-    return JsonResponse(context, safe=False)
+# def tes_import_fungsi(request):
+    # nama = fungsi_import('aditia darma')
+    # context = {
+        # 'status' : nama
+    # }
+    # return JsonResponse(context, safe=False)
 
 def tes_sql_raw(request):
     kabupaten = DaerahKabupaten.objects.all()[:20].values()
