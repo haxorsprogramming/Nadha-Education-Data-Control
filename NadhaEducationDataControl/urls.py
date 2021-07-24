@@ -8,7 +8,7 @@ from app_auth import views as auth
 # import app_siswa
 
 urlpatterns = [
-    # path('', auth.home_page),
+    path('', auth.home_page),
     # path('siswa/tambah-data/proses', siswa.tambah_data_proses),
     # path('tes-sql-raw', siswa.tes_sql_raw),
     # path('tes-import', siswa.tes_import_fungsi)
