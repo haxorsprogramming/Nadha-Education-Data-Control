@@ -27,7 +27,7 @@ class KeuanganTagihanSpp(models.Model):
 class KeuanganPengeluaranSekolah(models.Model):
     kd_pengeluaran = models.CharField(max_length=20)
     nama_pengeluaran = models.CharField(max_length=200)
-    deksripsi = models.TextChoices()
+    deksripsi = models.TextField()
     kategori = models.CharField(max_length=50)
     total_pengeluaran = models.IntegerField()
     username_operator = models.CharField(max_length=150)
